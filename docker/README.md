@@ -18,7 +18,25 @@ Edit `config.toml` and configure:
 - **`bitcoinrpc.username`** and **`bitcoinrpc.password`** - Your Bitcoin RPC credentials
 - **`network`** - Set to `main`, `testnet4`, or `signet`
 
-### 2. Start Hydrapool
+### 2. (Optional) Customize Grafana credentials
+
+Grafana credentials are controlled by the `GRAFANA_ADMIN_USER` and
+`GRAFANA_ADMIN_PASSWORD` environment variables in
+`docker/docker-compose.yml`. To change:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and set your desired credentials:
+```bash
+GRAFANA_ADMIN_USER=yourusername
+GRAFANA_ADMIN_PASSWORD=yourpassword
+```
+
+**Note:** The `.env` file is git-ignored to prevent accidentally committing credentials.
+
+### 3. Start Hydrapool
 
 Run Hydrapool only:
 ```bash
@@ -30,18 +48,18 @@ Or run with monitoring dashboards (Prometheus + Grafana):
 docker compose up -d
 ```
 
-### 3. Check status
+### 4. Check status
 
 ```bash
 docker compose logs -f hydrapool
 docker compose ps
 ```
 
-### 4. Access services
+### 5. Access services
 
 - **Stratum mining:** `stratum+tcp://localhost:3333`
 - **API server:** `http://localhost:46884`
-- **Grafana dashboard:** `http://localhost:3000` (if running with dashboards)
+- **Grafana dashboard:** `http://localhost:3000` (if running with dashboards, login with credentials from step 2)
 - **Prometheus:** `http://localhost:9090` (if running with dashboards)
 
 ## Updating Configuration
