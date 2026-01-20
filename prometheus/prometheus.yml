@@ -18,7 +18,13 @@ scrape_configs:
     static_configs:
       - targets: ['host.docker.internal:46884']
 
+    metric_relabel_configs:
+      - source_labels: [__name__]
+        regex: ''
+        action: drop
+
     metrics_path: "/metrics"
     basic_auth:
       username: 'change-me-api-user'
       password: 'change-me-api-password'
+
