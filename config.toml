@@ -34,7 +34,7 @@ difficulty_multiplier = 1.0
 pool_signature = "hydrapool"
 
 [bitcoinrpc]
-# RPC credentials are loaded from env vars
+# Replace these sample RPC credentials with your node's actual RPC user and password.
 url = "http://127.0.0.1:38332"
 username = "change-me-rpc-user"
 password = "change-me-rpc-password"
@@ -52,5 +52,5 @@ hostname = "0.0.0.0"
 port = 46884
 # Optional authentication credentials
 auth_user = "change-me-api-user"
-# auth_token is of the format salt:password-hmac. Use can hydrapool_cli gen-auth to generate a token.
+# auth_token is of the format salt:password-hmac. Use hydrapool_cli gen-auth to generate a token.
 auth_token = "replace-with-output-of-hydrapool-cli-gen-auth"

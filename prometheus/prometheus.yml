@@ -27,4 +27,3 @@ scrape_configs:
     basic_auth:
       username: 'change-me-api-user'
       password: 'change-me-api-password'
-

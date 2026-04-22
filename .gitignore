@@ -3,4 +3,7 @@ store*.db
 p2pool.log
 .env
 docker/.env
+docker/config.toml
+docker/prometheus.yml
+config.local.toml
 logs/*

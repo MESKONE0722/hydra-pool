@@ -73,4 +73,3 @@ port = 46884
 # 2. prometheus.yml to update auth
 auth_user = "change-me-api-user"
 auth_token = "replace-with-output-of-hydrapool-cli-gen-auth"
-
