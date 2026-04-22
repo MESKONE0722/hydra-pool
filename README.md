@@ -253,7 +253,7 @@ nano docker-compose.yml
 sudo docker compose up -d
 ```
 
-Note: By default, prometheus uses the built-in configuration with
+Note: The built-in Prometheus configuration must be updated to match
 the API credentials you generate for your deployment. Creating a
 custom `hydrapool/prometheus.yml` file overrides the default
 configuration.
